@@ -91,13 +91,12 @@
 </head>
 <body>
 <header>
-    <h1>EF1003 Data Literacy Projects</h1>
-    <p class="tagline">Poster & Webpage Summary – Your Name, KENTECH</p>
+    <h1>EF1003 Data Literacy Assignment 02 </h1>
+    <p class="tagline">Poster & Webpage for your project – 20250814 Choi Min</p>
 </header>
 
 <nav>
-    <a href="#project1">Project 1 (Text Data)</a>
-    <a href="#project2">Project 2 (Image Data)</a>
+    <a href="#project1">Project 1 (Data Literacy with Text Data)</a>
 </nav>
 
 <main>
@@ -151,69 +150,11 @@
         </ul>
     </section>
 
-    <!-- ================== PROJECT 2 ================== -->
-    <section id="project2">
-        <h2>Project 2 – Image Data: Visual Emotional Tone of Memes</h2>
-
-        <h3>Motivation & Research Question</h3>
-        <p>
-            Memes are a popular way to express emotions on social media, including self-deprecating jokes and negative humor.
-            These visual posts may reflect underlying stress or psychological struggles at a population level.
-        </p>
-        <p>
-            <strong>Research Question:</strong>
-            Are there systematic differences in visual tone (brightness, saturation, colorfulness)
-            between positive, neutral, and negative memes?
-        </p>
-
-        <h3>Dataset & Cleaning</h3>
-        <ul>
-            <li>Used the <em>6992 Meme Images Dataset with Labels</em> from Kaggle.</li>
-            <li>Each image has a sentiment label (very_positive, positive, neutral, negative, very_negative).</li>
-            <li>Merged labels into three classes: positive, neutral, negative and removed invalid or missing entries.</li>
-            <li>Matched each label with its image file path and skipped unreadable or missing images.</li>
-        </ul>
-
-        <h3>Methods</h3>
-        <ul>
-            <li>Loaded meme images and converted them to HSV color space using Python and OpenCV.</li>
-            <li>Extracted three global visual features:
-                <ul>
-                    <li><strong>Brightness</strong> – mean of the Value (V) channel</li>
-                    <li><strong>Saturation</strong> – mean of the Saturation (S) channel</li>
-                    <li><strong>Colorfulness</strong> – numeric score based on RGB channel differences</li>
-                </ul>
-            </li>
-            <li>Built a feature dataset for a random sample of about 1500 memes.</li>
-            <li>Compared feature distributions using boxplots and a brightness–colorfulness scatter plot.</li>
-        </ul>
-
-        <h3>Key Results</h3>
-        <ul>
-            <li>Neutral and positive memes are only slightly brighter on average than negative memes.</li>
-            <li>Brightness, saturation, and colorfulness distributions overlap strongly across all three sentiments.</li>
-            <li>The brightness–colorfulness scatter plot shows a positive correlation, but sentiment classes are mixed.</li>
-            <li>Overall, simple global visual features do not clearly separate positive, neutral, and negative memes.</li>
-        </ul>
-
-        <h3>Discussion</h3>
-        <ul>
-            <li>Visual tone alone is not a strong marker of sentiment in this meme dataset.</li>
-            <li>Many memes express emotion mainly through text, irony, and cultural context rather than color.</li>
-            <li>Color-based features are better interpreted as a rough proxy for emotional tone, not as a diagnostic signal.</li>
-        </ul>
-
-        <h3>Limitations & Future Work</h3>
-        <ul>
-            <li>Limitations: used only simple global color features; ignored meme text and real mental health data.</li>
-            <li>Future work: combine image features with meme text in a multimodal model and link them to survey-based mental health indicators.</li>
-        </ul>
-    </section>
 
 </main>
 
 <footer>
-    EF1003 Data Literacy – Term Projects · KENTECH
+    EF1003 Data Literacy – Term Project 01 · KENTECH
 </footer>
 </body>
 </html>
